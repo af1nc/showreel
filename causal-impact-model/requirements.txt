@@ -1,0 +1,11 @@
+# Required. The from-scratch BSTS fallback runs with only these three.
+numpy>=1.24
+pandas>=2.0
+statsmodels>=0.14
+
+# Optional backends. They are tried first when installed, but the demo does
+# not need them: the pipeline falls back to the statsmodels BSTS above.
+# Uncomment to enable. tfcausalimpact pulls in TensorFlow, which is large.
+#
+# tfcausalimpact>=0.0.11   # TensorFlow Probability BSTS
+# pycausalimpact>=0.1.1    # statsmodels-based CausalImpact

@@ -1,0 +1,8 @@
+# Core modelling dependency. Google Meridian pulls in a heavy scientific stack
+# (TensorFlow-Probability / JAX / NumPyro). Installing it is the slow part.
+google-meridian>=1.0
+
+# Data handling (also pulled in transitively by meridian, pinned here for clarity).
+numpy>=1.24
+pandas>=2.0
+xarray>=2023.1

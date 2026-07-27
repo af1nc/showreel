@@ -1,0 +1,22 @@
+{
+  "name": "streaming-xlsx-export",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Memory-safe, chunked, formula-injection-hardened XLSX export toolkit with data-source-agnostic handler factories.",
+  "scripts": {
+    "demo": "tsx src/demo.ts",
+    "server": "tsx src/server.ts",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0",
+    "express": "^4.19.2",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}

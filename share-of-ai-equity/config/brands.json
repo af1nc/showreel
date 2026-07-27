@@ -1,0 +1,11 @@
+{
+  "anchor": "Brand A",
+  "brands": [
+    { "name": "Brand A", "group": "Established", "aliases": ["BrandA", "Brand-A"] },
+    { "name": "Brand B", "group": "Established", "aliases": ["BrandB", "Brand-B"] },
+    { "name": "Brand C", "group": "Challenger", "aliases": ["BrandC", "Brand-C"] },
+    { "name": "Brand D", "group": "Challenger", "aliases": ["BrandD", "Brand-D"] },
+    { "name": "Brand E", "group": "Emerging",   "aliases": ["BrandE", "Brand-E"] }
+  ],
+  "_note": "Names and aliases are matched as whole words only (regex word boundaries). Bare generic words (for example 'Brand' or 'Analytics') must NOT be listed as aliases, otherwise 'Brand A' would false-match inside an unrelated phrase like 'Brand Analytics'. Keep aliases to real spelling variants of each brand."
+}

@@ -1,0 +1,25 @@
+{
+  "name": "bayesian-ab-engine",
+  "version": "1.0.0",
+  "description": "Dependency-free Bayesian A/B testing for two-arm conversion experiments, implemented from first principles (Lanczos log-Gamma, Marsaglia-Tsang Gamma sampling, Monte-Carlo Beta-Binomial).",
+  "type": "module",
+  "main": "src/bayesianAB.ts",
+  "scripts": {
+    "demo": "tsx src/demo.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "bayesian",
+    "ab-testing",
+    "beta-binomial",
+    "monte-carlo",
+    "statistics",
+    "conversion-rate"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "chat-export-voice",
+  "private": true,
+  "type": "module",
+  "scripts": { "demo": "node main.mjs --demo" }
+}

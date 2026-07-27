@@ -1,0 +1,23 @@
+{
+  "name": "vision-ad-classifier",
+  "version": "1.0.0",
+  "description": "Multimodal ad-creative classifier: deterministic FORMAT from pixel dimensions, an LLM only for CONTENT.",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "src/classifier.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "demo": "node src/demo.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "multimodal",
+    "vision",
+    "ad-classification",
+    "iab",
+    "deterministic",
+    "llm"
+  ]
+}

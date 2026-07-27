@@ -1,0 +1,18 @@
+{
+  "markets": [
+    { "code": "NA",   "label": "North America", "dashboard_code": "NA" },
+    { "code": "EU",   "label": "Europe",        "dashboard_code": "EU" },
+    { "code": "APAC", "label": "Asia Pacific",  "dashboard_code": "APAC" }
+  ],
+  "queries": [
+    { "id": "pm-01",  "scope": "global",     "topic": "Project management", "journey": "awareness",     "audience": "none",       "text": "What are the best project management tools for software teams?" },
+    { "id": "pm-02",  "scope": "global",     "topic": "Project management", "journey": "consideration", "audience": "remote",     "text": "Which project management tool is best for remote teams?" },
+    { "id": "db-01",  "scope": "global",     "topic": "Cloud databases",    "journey": "awareness",     "audience": "none",       "text": "What is the top cloud database for high-scale applications?" },
+    { "id": "db-02",  "scope": "global",     "topic": "Cloud databases",    "journey": "consideration", "audience": "none",       "text": "Which is the most reliable managed cloud database?" },
+    { "id": "crm-01", "scope": "global",     "topic": "CRM software",       "journey": "consideration", "audience": "smb",        "text": "What is the best CRM software for small businesses?" },
+    { "id": "crm-02", "scope": "global",     "topic": "CRM software",       "journey": "consideration", "audience": "sales",      "text": "What is the top CRM platform for sales teams?" },
+
+    { "id": "reg-01", "scope": "per-market", "topic": "Project management", "journey": "awareness",     "audience": "none",       "text": "Which project management tool is most popular in {market_label}?" },
+    { "id": "reg-02", "scope": "per-market", "topic": "CRM software",       "journey": "consideration", "audience": "none",       "text": "What is the leading CRM platform in {market_label}?" }
+  ]
+}

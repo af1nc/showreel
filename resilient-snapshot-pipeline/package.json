@@ -1,0 +1,30 @@
+{
+  "name": "resilient-snapshot-pipeline",
+  "version": "1.0.0",
+  "description": "A defense-in-depth pattern for keeping a dashboard fed by a rate-limited external API from ever going blank: a producer-side progressive-fill staged write plus a consumer-side no-blank read.",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "demo": "tsx src/demo.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "start": "node dist/demo.js"
+  },
+  "keywords": [
+    "data-reliability",
+    "idempotency",
+    "atomic-transaction",
+    "staged-write",
+    "resilience",
+    "sqlite"
+  ],
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

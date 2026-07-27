@@ -1,0 +1,22 @@
+{
+  "name": "share-of-ai-equity",
+  "version": "1.0.0",
+  "description": "Measure a brand's share of voice inside generative AI answers (answer engine optimisation).",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "src/shareOfAi.js",
+  "scripts": {
+    "demo": "node src/demo.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "share-of-ai",
+    "answer-engine-optimisation",
+    "generative-ai",
+    "brand-tracking",
+    "grounding",
+    "citations"
+  ]
+}

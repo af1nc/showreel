@@ -1,0 +1,6 @@
+{
+  "name": "fail-closed-gateway",
+  "private": true,
+  "type": "module",
+  "scripts": { "demo": "node main.mjs --demo" }
+}
