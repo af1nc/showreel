@@ -1,0 +1,6 @@
+# Index artefacts, written at runtime by main.py. Rebuilt from corpus/ in under a
+# second, so there is no reason to keep them in the repository.
+.index/
+
+__pycache__/
+*.pyc

@@ -2,7 +2,7 @@
 
 # 🛡️ Resilient Snapshot Pipeline
 
-![Systems & reliability](https://img.shields.io/badge/Systems_%26_reliability-f59e0b) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?logo=typescript&logoColor=white) ![offline demo](https://img.shields.io/badge/demo-offline-2ea44f)
+![Data engineering](https://img.shields.io/badge/Data_engineering-0ea5e9) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?logo=typescript&logoColor=white) ![offline demo](https://img.shields.io/badge/demo-offline-2ea44f)
 
 A **defense-in-depth** pattern for keeping a dashboard that is fed by a
 **rate-limited external API** from ever going blank.

@@ -1,0 +1,10 @@
+work_order,site,category,period,amount,winning_source,status
+WO-4471,Ashford Depot,electrical,2026-03,6980.50,vendor,RESOLVED
+WO-4471-B,Ashford Depot,plumbing,2026-03,2480.00,vendor,RESOLVED
+WO-5310,Marden Works,grounds,2026-03,3150.00,vendor,RESOLVED
+WO-6152,Ashford Depot,hvac,2026-04,18400.00,system,RESOLVED
+WO-6310,Marden Works,electrical,2026-04,9750.00,system,RESOLVED
+WO-6488,Kilbride Yard,plumbing,2026-04,12900.00,vendor,RESOLVED
+WO-7001,Marden Works,hvac,2026-04,2390.00,system,RESOLVED
+WO-7120,Ashford Depot,grounds,2026-04,1800.00,plan,RESOLVED
+WO-9004,Kilbride Yard,electrical,2026-03,900.00,plan,RESOLVED

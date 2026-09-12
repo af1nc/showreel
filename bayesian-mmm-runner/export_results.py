@@ -23,9 +23,9 @@ def _write_csv(path: str, rows: List[dict]) -> None:
     if not rows:
         logger.warning("No rows to write for %s", os.path.basename(path))
         # Still create an empty file so the absence is explicit.
-        open(path, "w").close()
+        open(path, "w", encoding="utf-8").close()
         return
-    with open(path, "w", newline="") as f:
+    with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         writer.writeheader()
         writer.writerows(rows)
@@ -68,6 +68,6 @@ def export_results(
         "n_budget_rows": len(results.budget_optimization),
         "n_weekly_rows": len(results.weekly_contributions),
     }
-    with open(os.path.join(output_dir, "model_run.json"), "w") as f:
+    with open(os.path.join(output_dir, "model_run.json"), "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2)
     logger.info("Wrote run summary -> model_run.json  (%s)", summary)

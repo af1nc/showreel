@@ -22,6 +22,14 @@ Run:  python main.py --demo
 
 from __future__ import annotations
 
+
+# The demos print box-drawing characters and arrows. A Windows console defaults
+# to cp1252, which cannot encode them, so an unguarded print crashes the demo on
+# a clean Windows machine. No-op on Linux and macOS.
+import sys as _sys
+for _stream in (_sys.stdout, _sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        _stream.reconfigure(encoding="utf-8", errors="replace")
 import json
 import sys
 from dataclasses import dataclass
@@ -158,7 +166,7 @@ def demo() -> None:
 
     out = Path("audit-2026-07-27.md")
     overall, verdicts = audit(rotting, now)
-    out.write_text(render(overall, verdicts, now))
+    out.write_text(render(overall, verdicts, now), encoding="utf-8")
     print(f"wrote {out} — the report a human finds waiting when things went wrong")
 
 

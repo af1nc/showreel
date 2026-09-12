@@ -1,0 +1,136 @@
+name: demos
+
+# The README promises every project runs offline in one command.
+# This is what holds that promise to account. Each job installs a single
+# project in isolation and runs its demo exactly as the README tells a
+# reader to run it. No credentials are configured anywhere in this file,
+# so a project that quietly grew a dependency on a network service fails
+# here rather than in a stranger's terminal.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  node-demos:
+    name: "node / ${{ matrix.project }}"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - agentic-sql-assistant
+          - bayesian-ab-engine
+          - chat-export-voice
+          - fail-closed-gateway
+          - publish-gate
+          - reach-frequency-dedup
+          - resilient-snapshot-pipeline
+          - share-of-ai-equity
+          - streaming-xlsx-export
+          - vision-ad-classifier
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: install
+        working-directory: ${{ matrix.project }}
+        run: npm install --no-audit --no-fund
+      - name: demo
+        working-directory: ${{ matrix.project }}
+        run: npm run demo
+      - name: tests
+        working-directory: ${{ matrix.project }}
+        run: npm run test --if-present
+      - name: typecheck
+        working-directory: ${{ matrix.project }}
+        run: |
+          npm run typecheck --if-present
+          npm run check --if-present
+
+  web-builds:
+    # These two are browser apps, so there is no headless demo to run.
+    # A clean production build is the equivalent proof that they still work.
+    name: "web / ${{ matrix.project }}"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - dataviz-techniques
+          - great-circle-route-map
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: install
+        working-directory: ${{ matrix.project }}
+        run: npm install --no-audit --no-fund
+      - name: build
+        working-directory: ${{ matrix.project }}
+        run: npm run build
+
+  python-stdlib:
+    # No pip step on purpose. If one of these ever grows a third party
+    # import, this job is what notices.
+    name: "python / ${{ matrix.project }}"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - ai-output-watchdog
+          - closed-book-rag
+          - correction-taught-classifier
+          - source-precedence-ledger
+          - udp-request-reply
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: demo
+        working-directory: ${{ matrix.project }}
+        run: python main.py --demo
+      - name: tests
+        working-directory: ${{ matrix.project }}
+        run: |
+          if [ -d tests ]; then python -m unittest discover tests -v; fi
+
+  python-modelling:
+    name: "python / ${{ matrix.project }}"
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - causal-impact-model
+          - hum-to-midi-tracker
+          - sos-revenue-econometrics
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: install
+        working-directory: ${{ matrix.project }}
+        run: pip install -r requirements.txt
+      - name: demo
+        working-directory: ${{ matrix.project }}
+        run: python main.py --demo
+
+  # bayesian-mmm-runner is deliberately not gated here. Its one dependency
+  # pulls in a full TensorFlow and JAX stack, which takes longer to install
+  # than every other job in this file takes to finish. It is the one demo
+  # you should expect to wait on.

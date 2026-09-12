@@ -1,0 +1,10 @@
+invoice_ref,site,category,period,invoiced_amount,invoice_status
+wo4471,Ashford Depot,electrical,2026-03,6980.50,invoiced
+WO-4471-B,Ashford Depot,plumbing,2026-03,2480.00,invoiced
+WO-5203,Kilbride Yard,hvac,2026-03,4820.00,cancelled
+WO-5209,Kilbride Yard,grounds,2026-03,0.00,cancelled
+WO 5310,Marden Works,grounds,2026-03,3150.00,invoiced
+WO-6152,Ashford Depot,hvac,2026-04,6300.00,invoiced
+WO-6310,Marden Works,electrical,2026-04,1200.00,invoiced
+WO-6488,Kilbride Yard,plumbing,2026-04,12900.00,invoiced
+WO-7001,Marden Works,hvac,2026-04,2450.00,invoiced

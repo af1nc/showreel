@@ -2,7 +2,7 @@
 
 # 📤 Streaming XLSX Export
 
-![Systems & reliability](https://img.shields.io/badge/Systems_%26_reliability-f59e0b) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?logo=typescript&logoColor=white) ![offline demo](https://img.shields.io/badge/demo-offline-2ea44f)
+![Formats & protocols](https://img.shields.io/badge/Formats_%26_protocols-f59e0b) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?logo=typescript&logoColor=white) ![offline demo](https://img.shields.io/badge/demo-offline-2ea44f)
 
 A small TypeScript toolkit for exporting large tabular datasets to Excel without
 running out of memory, without leaking spreadsheet formula-injection payloads,

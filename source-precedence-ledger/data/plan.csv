@@ -1,0 +1,9 @@
+work_order,site,category,period,approved_amount,status
+WO-4471,Ashford Depot,electrical,2026-03,6400.00,approved
+WO-4471-B,Ashford Depot,plumbing,2026-03,2100.00,approved
+WO-5310,Marden Works,grounds,2026-03,3000.00,approved
+WO-6152,Ashford Depot,hvac,2026-04,7200.00,approved
+WO-6310,Marden Works,electrical,2026-04,8900.00,approved
+WO-6488,Kilbride Yard,plumbing,2026-04,5100.00,approved
+WO-7001,Marden Works,hvac,2026-04,2200.00,approved
+WO-7120,Ashford Depot,grounds,2026-04,1800.00,approved
